@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AboutWeb | Team Information</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins', 'sans-serif'] },
+          colors: { primary: '#e63946', darkblue: '#1d3557' },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-gray-50 font-sans antialiased text-gray-800">
+
+  <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="#" class="text-3xl font-bold text-darkblue">AboutWeb</a>
+        <div class="hidden md:flex space-x-6">
+          <a href="Documentation.html" class="text-black px-4 py-2 hover:bg-primary rounded-md transition">Documentation</a>
+          <a href="index.php" class="bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 rounded-lg text-sm transition">Home</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="relative">
+    <div class="absolute inset-0 bg-black/50 z-10"></div>
+    <div class="h-[60vh] min-h-[400px] bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWJvdXQlMjB1c3xlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 z-20 flex flex-col justify-center items-center text-center p-4">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4">Meet the Creators</h1>
+      <p class="text-lg md:text-2xl text-gray-200 font-light max-w-2xl">
+        Get to know the brilliant minds behind our web development project
+      </p>
+    </div>
+  </section>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="members">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-black mb-12">About Us</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <div onclick="openModal('Featured')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 p-5 text-center">
+        <h3 class="text-xl font-semibold text-darkblue mb-1">Delacruz, Darell</h3>
+        <p class="text-red-600 font-bold">Teacher</p>
+      </div>
+
+      <div onclick="openModal('Adonis')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 p-5 text-center">
+        <h3 class="text-xl font-semibold text-darkblue mb-1">Mark Clarence M. Adonis</h3>
+        <p class="text-gray-600 font-medium">Student</p>
+      </div>
+
+      <div onclick="openModal('Borlongan')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 p-5 text-center">
+        <h3 class="text-xl font-semibold text-darkblue mb-1">Adriel SD. Borlongan</h3>
+        <p class="text-gray-600 font-medium">Student</p>
+      </div>
+
+      <div onclick="openModal('Cepe')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 p-5 text-center">
+        <h3 class="text-xl font-semibold text-darkblue mb-1">David James E. Cepe</h3>
+        <p class="text-gray-600 font-medium">Student</p>
+      </div>
+
+      <div onclick="openModal('Jose')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 p-5 text-center">
+        <h3 class="text-xl font-semibold text-darkblue mb-1">Prince Julian P. Jose</h3>
+        <p class="text-gray-600 font-medium">Student</p>
+      </div>
+
+      <div onclick="openModal('Moises')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 p-5 text-center">
+        <h3 class="text-xl font-semibold text-darkblue mb-1">Edrick Gabriel P. Moises</h3>
+        <p class="text-gray-600 font-medium">Student</p>
+      </div>
+
+      <div onclick="openModal('Santos')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 p-5 text-center">
+        <h3 class="text-xl font-semibold text-darkblue mb-1">Cris Andrei A. Santos</h3>
+        <p class="text-gray-600 font-medium">Student</p>
+      </div>
+      <div onclick="openModal('Anacin')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 p-5 text-center">
+        <h3 class="text-xl font-semibold text-darkblue mb-1">Dominic Romuel F. Anacin</h3>
+        <p class="text-gray-600 font-medium">Student</p>
+      </div>
+      </div>
+  </main>
+
+  <footer class="bg-gray-100 text-center py-6 text-sm text-gray-500">
+    © 2025 AboutWeb Team – All Rights Reserved
+  </footer>
+
+  <div id="infoModal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-xl w-11/12 max-w-md p-6 relative animate-[fadeIn_0.3s_ease]">
+      <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
+      <h2 id="modalTitle" class="text-2xl font-bold mb-4 text-darkblue"></h2>
+      <div id="modalBody" class="text-gray-700 space-y-2"></div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('infoModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+
+    const infoData = {
+      'Featured': { 
+        title: 'Delacruz, Darell',
+        content: '<ul class="list-none space-y-2"><li><strong>Position:</strong> ICT Teacher at Dr. Yangas College Inc.</li><li><strong>Skills:</strong> HTML, CSS, JavaScript</li></ul>'
+      },
+      'Adonis': { 
+        title: 'Mark Clarence M. Adonis – AboutWeb',
+        content: '<ul class="list-none space-y-2"><li>Strand: ICT</li><li>Study at Dr. Yangas Colleges Inc.</li><li>Hobby: Gaming & Music</li><li>Age: 17</li><li>Contact: 09610051100</li><li>Email: mark.adonis671228@gmail.com</li><li>Lives in: Bocaue, Bulacan</li></ul>'
+      },
+      'Borlongan': { 
+        title: 'Adriel SD. Borlongan – Homepage 5',
+        content: '<ul class="list-none space-y-2"><li>Strand: ICT</li><li>Study at Dr. Yangas Colleges Inc.</li><li>Hobby: Driving</li><li>Age: 17</li><li>Contact: 0968461844</li><li>Email: adrielsdborlongan.29@gmail.com</li><li>Lives in: Guiguinto, Bulacan</li></ul>'
+      },
+      'Cepe': { 
+        title: 'David James E. Cepe – Webpage 5, CSS',
+        content: '<ul class="list-none space-y-2"><li>Strand: ICT</li><li>Study at Dr. Yangas Colleges Inc.</li><li>Hobby: Online Games, Arts & Web Dev</li><li>Age: 17</li><li>Contact: 09396231304</li><li>Email: cepe3559@gmail.com</li><li>Lives in: Taal, Bulacan</li></ul>'
+      },
+      'Jose': { 
+        title: 'Prince Julian P. Jose – Home Page',
+        content: '<ul class="list-none space-y-2"><li>Strand: ICT</li><li>Study at Dr. Yangas Colleges Inc.</li><li>Hobby: Cooking</li><li>Age: 16</li><li>Contact: 09657453969</li><li>Email: edrickmoise158@gmail.com</li><li>Lives in: Bulacan, Bulacan</li></ul>'
+      },
+      'Moises': { 
+        title: 'Edrick Gabriel P. Moises – Webpage 5',
+        content: '<ul class="list-none space-y-2"><li>Strand: ICT</li><li>Study at Dr. Yangas Colleges Inc.</li><li>Hobby: Driving</li><li>Age: 17</li><li>Contact: 0968461844</li><li>Email: adrielsdborlongan.29@gmail.com</li><li>Lives in: Guiguinto, Bulacan</li></ul>'
+      },
+      'Santos': { 
+        title: 'Cris Andrei A. Santos – Documentation Center',
+        content: '<ul class="list-none space-y-2"><li>Strand: ICT</li><li>Study at Dr. Yangas Colleges Inc.</li><li>Hobby: Gaming</li><li>Age: 17</li><li>Contact: N/A</li><li>Email: N/A</li><li>Lives in: Bulakan, Bulacan</li></ul>'
+      },
+      'Anacin': { 
+        title: 'Dominic Romuel F. Anacin – Login and Registration Form',
+        content: '<ul class="list-none space-y-2"><li>Strand: ICT</li><li>Study at Dr. Yangas Colleges Inc.</li><li>Hobby: Gaming</li><li>Contact: 09983576554</li><li>Email: anacindoms@gmail.com</li><li>Lives in: Balagtas, Bulacan</li></ul>'
+    }
+  };
+    
+
+    function openModal(member) {
+      const data = infoData[member];
+      modalTitle.innerHTML = data.title;
+      modalBody.innerHTML = data.content;
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+    }
+
+    window.onclick = (event) => {
+      if (event.target === modal) closeModal();
+    };
+  </script>
+
+</body>
+</html>

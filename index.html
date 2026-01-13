@@ -1,0 +1,127 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Guide - Japan, Italy & Colombia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: { primary: '#e63946' },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <audio id="bg-audio" autoplay loop>
+  <source src="chill.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Try to play on load
+  const audio = document.getElementById('bg-audio');
+  audio.volume = 0.5; // adjust volume
+  audio.play().catch(() => {
+    // Fallback: play after user clicks anywhere
+    document.addEventListener('click', () => audio.play());
+  });
+</script>
+
+  <header class="bg-gray-900 text-white py-6 text-center shadow-md">
+    <h1 class="text-3xl font-bold tracking-wide">Welcome to Our Travel Website!</h1>
+  </header>
+
+  <nav class="bg-gray-800 text-center py-4">
+    <a href="#home" class="text-white px-4 py-2 hover:bg-primary rounded-md transition">Home</a>
+    <a href="#destinations" class="text-white px-4 py-2 hover:bg-primary rounded-md transition">Destinations</a>
+    <a href="#why" class="text-white px-4 py-2 hover:bg-primary rounded-md transition">Why Choose Us</a>
+    <a href="#contact" class="text-white px-4 py-2 hover:bg-primary rounded-md transition">Contact</a>
+    <a href="ABOUTWEB.html" class="text-white px-4 py-2 hover:bg-primary rounded-md transition">About us</a>
+    <a href="Documentation.html" class="text-white px-4 py-2 hover:bg-primary rounded-md transition">Documentation</a>
+   <a href="login.php" class="text-white px-4 py-2 hover:bg-primary rounded-md transition">Login</a>
+    <a href="register.php" class="text-white px-4 py-2 hover:bg-primary rounded-md transition">Register</a>
+
+
+
+  </nav>
+
+  <section id="home" class="relative">
+    <div class="absolute inset-0 bg-black/50 z-10"></div>
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+         alt="Travel background" 
+         class="h-[60vh] w-full object-cover object-center">
+    <div class="absolute inset-0 z-20 flex flex-col justify-center items-center text-center p-6">
+      <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-3">Explore the World with Us!</h2>
+      <p class="text-gray-200 text-lg md:text-xl max-w-2xl">Discover Japan, Italy, and Colombia — destinations filled with beauty, culture, and adventure.</p>
+    </div>
+  </section>
+
+  <section id="destinations" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-10">Recommended Destinations</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <a href="japan.html" class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 block">
+        <img src='tokyo.jpg'alt="Japan" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-primary mb-2">Japan</h3>
+          <p class="text-gray-600">Experience the harmony of tradition and technology — from ancient temples to Tokyo’s neon skyline.</p>
+        </div>
+      </a>
+
+      <a href="italy.html" class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 block">
+        <img src="https://images.unsplash.com/photo-1583844056361-4418a8f2a985?fm=jpg&q=60&w=3000" alt="Italy" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-primary mb-2">Italy</h3>
+          <p class="text-gray-600">Fall in love with art, history, and cuisine — explore Rome’s landmarks, Venice’s canals, and Florence’s masterpieces.</p>
+        </div>
+      </a>
+
+      <a href="columbia.html" class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 block">
+        <img src="https://images.unsplash.com/photo-1512250431446-d0b4b57b27ec?fm=jpg&q=60&w=3000" alt="Colombia" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-primary mb-2">Colombia</h3>
+          <p class="text-gray-600">Discover Colombia’s vibrant cities, tropical landscapes, and colorful traditions that make every visit unforgettable.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section id="why" class="bg-white py-16">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h3 class="text-3xl md:text-4xl font-bold text-primary mb-6">Why Choose Our Website?</h3>
+      <p class="text-gray-600 text-lg mb-4">🌍 Handpicked destinations with complete and reliable travel guides.</p>
+      <p class="text-gray-600 text-lg mb-4">🧭 Trusted travel information from experienced travelers.</p>
+      <p class="text-gray-600 text-lg mb-4">📸 Beautiful visuals and cultural insights to inspire your next trip.</p>
+      <p class="text-gray-600 text-lg">💬 Helpful tips for a smooth, safe, and memorable travel experience.</p>
+    </div>
+  </section>
+
+ 
+
+
+  <footer id="contact" class="bg-gray-900 text-white py-10 text-center">
+    <p class="text-lg font-semibold mb-2">Contact Us</p>
+    <p class="text-gray-400">📧 travelguide@exploreworld.com | 📞 +63 123 456 7890</p>
+    <p class="text-gray-500 mt-4">© 2025 Travel Guide — Japan, Italy & Colombia</p>
+  </footer>
+
+ 
+
+
+ 
+
+
+</body>
+</html>

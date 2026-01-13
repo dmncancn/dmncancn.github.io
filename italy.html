@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Italy Travel Guide</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav h1 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #111;
+    }
+    nav a {
+      text-decoration: none;
+      color: #555;
+      padding: 10px 16px;
+      font-weight: 500;
+      font-size: 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #f3f4f6;
+      color: #dc2626;
+    }
+    .home {
+      background-color: #dc2626;
+      color: white;
+      margin-left: 16px;
+      font-weight: 600;
+    }
+    .home:hover {
+      background-color: #b91c1c;
+    }
+    .hero {
+      position: relative;
+      height: 60vh;
+      min-height: 400px;
+      background: url('https://images.unsplash.com/photo-1583844056361-4418a8f2a985?fm=jpg&q=60&w=3000') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 20px;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+    .hero-content p {
+      font-size: 1.3rem;
+      color: #e5e7eb;
+      font-weight: 300;
+    }
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    section {
+      margin-bottom: 80px;
+    }
+    section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      color: #111;
+      margin-bottom: 40px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 20px;
+    }
+    .card-content h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #111;
+    }
+    .card-content p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    table {
+      width: 100%;
+      border-spacing: 30px;
+    }
+    td {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      vertical-align: top;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    td:hover {
+      transform: scale(1.03);
+    }
+    td h3 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 10px;
+    }
+    td p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .nav-buttons {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      z-index: 50;
+    }
+    .nav-buttons a {
+      background: white;
+      color: #444;
+      border-radius: 50%;
+      padding: 14px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      text-decoration: none;
+      font-size: 20px;
+      transition: all 0.3s;
+    }
+    .nav-buttons a:hover {
+      background-color: #dc2626;
+      color: white;
+    }
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+<audio id="bg-audio" autoplay loop>
+  <source src="chill.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const audio = document.getElementById('bg-audio');
+  audio.volume = 0.5; 
+  audio.play().catch(() => {
+    document.addEventListener('click', () => audio.play());
+  });
+</script>
+  
+  <header>
+    <nav>
+      <h1>Italy Guide</h1>
+      <div>
+        <a href="#places">Places to Visit</a>
+        <a href="#food">Food to Eat</a>
+        <a href="#tips">Travel Tips</a>
+        <a href="ABOUTWEB.html">About Us</a>
+        <a href="index.php" class="home">Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Italy</h1>
+      <p>Experience art, history, and cuisine in the heart of the Mediterranean.</p>
+    </div>
+  </section>
+
+  <main>
+    <section id="places">
+      <h2>Must-Visit Places</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/15/c5/af/64.jpg" alt="Rome">
+          <div class="card-content">
+            <h3>Rome</h3>
+            <p>The Eternal City. Visit the Colosseum, Vatican City, and walk through centuries of history.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.pexels.com/photos/18293705/pexels-photo-18293705/free-photo-of-people-in-gondolas-on-canal-in-venice.jpeg" alt="Venice">
+          <div class="card-content">
+            <h3>Venice</h3>
+            <p>The city on water. Explore the canals, St. Mark’s Square, and the glassworks of Murano.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://static.wixstatic.com/media/3225d4_72b7700afef942ed81ca7c87ecca607c~mv2.jpg" alt="Florence">
+          <div class="card-content">
+            <h3>Florence</h3>
+            <p>Home of the Renaissance. See the Uffizi Gallery, Michelangelo’s David, and the beautiful Duomo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="food">
+      <h2>Iconic Foods to Try</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://simply-delicious-food.com/wp-content/uploads/2020/06/Grilled-Pizza-Margherita-3.jpg" alt="Pizza Margherita">
+          <div class="card-content">
+            <h3>Pizza Margherita</h3>
+            <p>Simple and perfect — mozzarella, tomato, and basil baked on a wood-fired crust.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://eataly.ca/wp-content/uploads/2018/02/tagliatelle-al-ragu-pasta-web.jpg" alt="Pasta">
+          <div class="card-content">
+            <h3>Pasta</h3>
+            <p>From carbonara to tagliatelle al ragù, each region has its own signature pasta dish.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://bellodolceicecream.com/wp-content/uploads/2023/02/appetizing-sweet-fruit-ice-cream-glass.png" alt="Gelato">
+          <div class="card-content">
+            <h3>Gelato</h3>
+            <p>Creamier than ice cream, Italian gelato is a must-try treat on a warm day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tips">
+      <h2>Essential Travel Tips</h2>
+      <table>
+        <tr>
+          <td>
+            <h3>Validate Your Train Ticket</h3>
+            <p>Validate your ticket before boarding regional trains to avoid fines.</p>
+          </td>
+          <td>
+            <h3>Dress Modestly in Churches</h3>
+            <p>Cover shoulders and knees when visiting religious sites in Italy.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>Eat Like a Local</h3>
+            <p>Lunch is from 1–3 PM, dinner starts late. Enjoy meals slowly and socially.</p>
+          </td>
+          <td>
+            <h3>Watch for Pickpockets</h3>
+            <p>Be alert and keep your belongings close in crowded tourist areas.</p>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </main>
+
+  <div class="nav-buttons">
+    <a href="japan.html">&#8592;</a>
+    <a href="columbia.html">&#8594;</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Italy Travel Guide | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

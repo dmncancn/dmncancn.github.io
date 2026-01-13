@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation’s Corner | Travel Guide Pro Max</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #dff6ff 0%, #ffffff 100%);
+      margin: 0;
+      padding: 0;
+      color: #2d3436;
+      line-height: 1.7;
+    }
+
+    header {
+      background-image: url('https://c0.wallpaperflare.com/preview/7/760/960/document-paper-office-composition.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5); 
+      z-index: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 2rem; 
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #d1d5db; 
+      font-size: 1.125rem; 
+    }
+
+   
+    nav {
+      background-color: #caf0f8;
+      text-align: center;
+      padding: 14px;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    nav a {
+      color: #0077b6;
+      text-decoration: none;
+      margin: 0 12px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #0077b6;
+      color: #ffffff;
+    }
+
+  
+    main {
+      max-width: 1000px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      border-radius: 14px;
+      padding: 40px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #0077b6;
+      border-left: 6px solid #00b4d8;
+      padding-left: 12px;
+      margin-bottom: 20px;
+      font-size: 1.7rem;
+    }
+
+    h3 {
+      color: #023e8a;
+      font-size: 1.3rem;
+    }
+
+    
+    .member {
+      background: linear-gradient(to bottom right, #f8f9fa, #ffffff);
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .member:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .member img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 10px;
+      margin: 12px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .member img:hover {
+      transform: scale(1.03);
+    }
+
+    .image-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    pre {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 14px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+      color: #111;
+      border: 1px solid #dee2e6;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+    }
+
+    
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: linear-gradient(to right, #0077b6, #00b4d8);
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 50px;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    em {
+      background: #e0f7fa;
+      padding: 8px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      color: #023e8a;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Documentation’s Corner</h1>
+    <p>Travel Guide Pro Max | Development Documentation</p>
+  </header>
+
+  <nav>
+    <a href="index.php">Home</a>
+    <a href="ABOUTWEB.html">About Us</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Overview</h2>
+      <p>
+        Welcome to <strong>Documentation’s Corner</strong> — a behind-the-scenes look at how our group created 
+        <em>Travel Guide Pro Max</em>. Each member contributed to different parts of the website. 
+        Below, you’ll find their names, assigned pages, screenshots of their work, and brief explanations of their code.
+      </p>
+    </section>
+
+    <section>
+      <h2>Member Showcase</h2>
+
+      <div class="member">
+        <h3>Coder: <strong>Prince Julian P. Jose</strong></h3>
+        <p><strong>Part:</strong> Home Page</p>
+        <div class="image-group">
+          <img src="bahay.png" alt="Home Page Screenshot">
+        </div>
+        <p><strong>Explanation:</strong> Prince designed the homepage, which introduces the Travel Guide Pro Max website and highlights its main destinations.</p>
+      </div>
+
+      <div class="member">
+        <h3>Coder: <strong>Mark Clarence M. Adonis</strong></h3>
+        <p><strong>Part:</strong> About the Developer Page</p>
+        <div class="image-group">
+          <img src="aboutus.png" alt="About Us Screenshot">
+        </div>
+        <p><strong>Explanation:</strong> Mark created the Developer’s Channel, including each member’s profile, photo, and short bio about their roles.</p>
+      </div>
+
+      <div class="member">
+        <h3>Coder: <strong>David James E. Cepe</strong></h3>
+        <p><strong>Part:</strong> ALL CSS Styling, Page 4 — Top Destinations, and Page 5 — Must Visit Places, Links All Web, MusicBG</p>
+        <div style="display: flex; justify-content: center; gap: 10px; padding: 20px;">
+  <img src="japancss.png" alt="Photo 1" style="width: 150px;">
+  <img src="italycss.png" alt="Photo 2" style="width: 150px;">
+  <img src="colombiacss.png" alt="Photo 3" style="width: 150px;">
+  <img src="code.png" alt="Photo 4" style="width: 150px;">
+  <img src="link.png" alt="Photo 5" style="width: 150px;">
+</div>
+
+        <p><strong>Explanation:</strong> David was responsible for the CSS design and helped develop Page 4 and Page 5, ensuring consistent styling, layout, and responsiveness across all destination pages.</p>
+      </div>
+
+      <div class="member">
+        <h3>Coders: <strong>Edrick Gabriel P. Moises & Adriel S. D. Borlongan</strong></h3>
+        <p><strong>Part:</strong> Page 5 — Must Visit Places</p>
+        <div class="image-group">
+          <img src="japancode.png" alt="Must Visit Places Screenshot">
+          <img src="columbiacode.png" alt="Must Visit Places Screenshot">
+        </div>
+        <p><strong>Explanation:</strong> Edrick and Adriel developed the “Must Visit Places” section, showcasing beautiful sceneries, cultural heritage, and local delicacies from each country.</p>
+      </div>
+
+      <div class="member">
+        <h3>Coder: <strong>Cris Andrei A. Santos</strong></h3>
+        <p><strong>Part:</strong> Documentation’s Corner</p>
+        <div class="image-group">
+          <img src="docucode.png" alt="Documentation Screenshot">
+        </div>
+        <p><strong>Explanation:</strong> Cris developed this documentation page, compiling screenshots, source code samples, and project descriptions. This serves as a formal report summarizing the team’s workflow, website design, and applied HTML/CSS techniques.</p>
+      </div>
+   
+       <div class="member">
+        <h3>Coder: <strong>Dominic Romuel F. Anacin</strong></h3>
+        <p><strong>Part:</strong> Login and Registration Form</p>
+         <div class="image-group">
+           <img src="login.png" alt="Login Screenshot" style="width: 150px;">
+          <img src="registercode.png" alt="Registration Form Screenshot" style="width: 150px;">
+        </div>
+         <p><strong>Explanation:</strong> Dominic developed the Login and Registration Form interface so this makes the website more organized and realistic.</p>
+</div>
+
+  
+    </section>
+
+    <section>
+      <h2>Sample Code Snippet</h2>
+      <pre><code>&lt;nav&gt;
+  &lt;a href="bahay.html"&gt;Home&lt;/a&gt;
+  &lt;a href="developers.html"&gt;About the Developer&lt;/a&gt;
+  &lt;a href="documentation.html"&gt;Documentation’s Corner&lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+      <p>This simple navigation bar connects all pages of the Travel Guide website.</p>
+    </section>
+
+    <section>
+      <h2>Reflection</h2>
+      <p>
+        Creating <em>Travel Guide </em> was both challenging and rewarding. 
+        Each member applied their HTML5 and CSS knowledge to create pages that 
+        complement one another. This project enhanced our understanding of website 
+        structure, layout design, and teamwork in web development.
+      </p>
+      <p><em>
+        Note: Some formatting and design enhancements were assisted by AI tools, particularly in refining the CSS for responsiveness, spacing, and layout styling. 
+        However, all original HTML, structure, screenshots, and written content were created by our team based on our learning and effort.
+      </em></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Travel Guide <br>Documentation by <strong>Cris Andrei A. Santos</strong></p>
+  </footer>
+
+</body>
+</html>
